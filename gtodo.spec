@@ -43,7 +43,7 @@ desktop-file-install	--vendor="" \
 
 %post
 %update_menus
-GCONF_CONFIG_SOURCE=`gconftool-2 --get-default-source` gconftool-2 --makefile-install-rule %{_sysconfdir}/gconf/schemas/%{name}.schemas > /dev/null
+%post_install_gconf_schemas %{name}
 
 %preun
 if [ "$1" = "0" ] ; then
