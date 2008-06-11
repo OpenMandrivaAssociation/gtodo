@@ -46,9 +46,7 @@ desktop-file-install	--vendor="" \
 %post_install_gconf_schemas %{name}
 
 %preun
-if [ "$1" = "0" ] ; then
- GCONF_CONFIG_SOURCE=`gconftool-2 --get-default-source` gconftool-2 --makefile-uninstall-rule %{_sysconfdir}/gconf/schemas/%{name}.schemas > /dev/null
-fi
+%preun_uninstall_gconf_schemas %{name}
 
 %postun
 %clean_menus
