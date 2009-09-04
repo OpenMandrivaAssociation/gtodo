@@ -1,6 +1,6 @@
 %define	name	gtodo
 %define	version	0.16.0
-%define	release	%mkrel 0.rc1.1
+%define	release	%mkrel 0.rc1.2
 %define	Summary	TODO List manager for Gnome 2
 
 Summary:	%{Summary}
