@@ -1,6 +1,6 @@
 %define	name	gtodo
 %define	version	0.16.0
-%define	release	%mkrel 0.rc1.2
+%define	release	%mkrel 0.rc2.1
 %define	Summary	TODO List manager for Gnome 2
 
 Summary:	%{Summary}
@@ -10,7 +10,7 @@ Release:	%{release}
 License:	GPL
 Group:		Office
 URL:		http://gtodo.qballcow.nl/
-Source0:	%{name}-%{version}-rc1.tar.bz2
+Source0:	%{name}-%{version}-rc2.tar.bz2
 Source11:	gtodo16.png
 Source12:	gtodo32.png
 Source13:	gtodo48.png
