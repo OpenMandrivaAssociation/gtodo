@@ -14,6 +14,7 @@ Source0:	%{name}-%{version}-rc1.tar.bz2
 Source11:	gtodo16.png
 Source12:	gtodo32.png
 Source13:	gtodo48.png
+Patch0:		gtodo-0.16.0-fix-str-fmt.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	gettext libxml2-devel gtk+2-devel libGConf2-devel
 BuildRequires:	perl-XML-Parser gnome-vfs2-devel libxslt-devel
@@ -25,6 +26,7 @@ It tries to follow the hig and gnome policy as good as possible.
 
 %prep
 %setup -q 
+%patch0 -p0
 
 %build
 %configure2_5x
