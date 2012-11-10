@@ -1,0 +1,30 @@
+--- src/callback.c.str	2010-02-18 10:59:56.000000000 +0100
++++ src/callback.c	2010-02-18 11:00:05.000000000 +0100
+@@ -129,6 +129,7 @@
+ 			GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
+ 			type,
+ 			GTK_BUTTONS_NONE,
++			"%s",
+ 			text
+ 			);
+ 	if(type == GTK_MESSAGE_WARNING)
+--- libgtodo/libgtodo.c.orig	2006-01-18 21:31:55.000000000 +0100
++++ libgtodo/libgtodo.c	2010-02-18 11:04:30.000000000 +0100
+@@ -619,7 +619,7 @@
+ 		if(!(result == GNOME_VFS_OK || result == GNOME_VFS_ERROR_EOF))
+ 		{
+ 			g_free(read_buf);
+-			g_set_error(&tmp_error,LIBGTODO_ERROR,LIBGTODO_ERROR_GNOME_VFS,gnome_vfs_result_to_string(result));
++			g_set_error(&tmp_error,LIBGTODO_ERROR,LIBGTODO_ERROR_GNOME_VFS,"%s",gnome_vfs_result_to_string(result));
+ 			g_propagate_error(error, tmp_error);
+ 			gnome_vfs_file_info_unref(info);
+ 			return TRUE;
+@@ -676,7 +676,7 @@
+ 	}
+ 	else{
+ 		/* save some more info here.. check for some logicol errors and print it. */
+-		g_set_error(&tmp_error,LIBGTODO_ERROR,LIBGTODO_ERROR_GNOME_VFS,gnome_vfs_result_to_string(info_result));
++		g_set_error(&tmp_error,LIBGTODO_ERROR,LIBGTODO_ERROR_GNOME_VFS,"%s",gnome_vfs_result_to_string(info_result));
+ 		g_propagate_error(error, tmp_error);
+ 		gnome_vfs_file_info_unref(info);
+ 		return TRUE;
