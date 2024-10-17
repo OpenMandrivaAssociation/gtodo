@@ -9,7 +9,7 @@ Version:	%{version}
 Release:	%{release}
 License:	GPL
 Group:		Office
-URL:		http://gtodo.qballcow.nl/
+URL:		https://gtodo.qballcow.nl/
 Source0:	%{name}-%{version}-rc2.tar.bz2
 Source11:	gtodo16.png
 Source12:	gtodo32.png
