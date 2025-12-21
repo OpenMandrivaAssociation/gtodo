@@ -16,6 +16,11 @@ Source12:	gtodo32.png
 Source13:	gtodo48.png
 Patch0:		gtodo-0.16.0-fix-str-fmt.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	gettext libxml2-devel gtk+2-devel libGConf2-devel
 BuildRequires:	perl-XML-Parser gnome-vfs2-devel libxslt-devel
 BuildRequires:	desktop-file-utils
